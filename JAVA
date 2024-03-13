@@ -1,0 +1,29 @@
+ //(PRINTING SECOND MAXIMUM IN ARRAY....)
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in = new Scanner(System.in);
+	      System.out.println("values are:");
+	    int a = in.nextInt();
+	    int [] n = new int[a];
+	    int i,j;
+	    for(i=0;i<a;i++){
+	        n[i]=in.nextInt();           
+	    }
+	    for (i = 0; i <a; i++)   
+        {  
+        for (j = i + 1; j <a; j++)   
+          {  
+            int tmp = 0;  
+            if (n[i] > n[j])   
+            {  
+            tmp = n[i];  
+            n[i] = n[j];  
+            n[j] = tmp;  
+            }  
+            }  
+	   	}
+	System.out.println("second largest number :" +n[a-2]);
+}
+}
